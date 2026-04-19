@@ -1,0 +1,18 @@
+name: Documentation improvement
+description: Suggest an improvement to README, Agent.md, or other docs.
+title: "[docs] <short description>"
+labels: ["documentation"]
+body:
+  - type: input
+    id: file
+    attributes:
+      label: File
+      placeholder: README.md
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggestion
+    validations:
+      required: true

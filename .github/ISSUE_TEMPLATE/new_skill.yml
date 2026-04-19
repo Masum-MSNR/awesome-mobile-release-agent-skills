@@ -1,0 +1,39 @@
+name: New skill proposal
+description: Propose a new SKILL.md for this collection.
+title: "[skill] <short title>"
+labels: ["skill", "enhancement"]
+body:
+  - type: input
+    id: skill_id
+    attributes:
+      label: Skill ID
+      description: Short kebab-case identifier, e.g. `offline-cache`.
+      placeholder: my-new-skill
+    validations:
+      required: true
+  - type: input
+    id: category
+    attributes:
+      label: Category
+      description: Which category does this belong to? e.g. `state-management`, `networking`.
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem the skill solves
+      description: What task should the agent be able to perform after reading this skill?
+    validations:
+      required: true
+  - type: textarea
+    id: outline
+    attributes:
+      label: Outline of the instructions
+      description: Numbered steps the skill will teach.
+    validations:
+      required: true
+  - type: textarea
+    id: references
+    attributes:
+      label: References
+      description: Official docs, RFCs, or prior art supporting this skill.

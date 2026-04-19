@@ -1,0 +1,30 @@
+name: Skill bug / correction
+description: Report an error, outdated API, or broken code sample in an existing SKILL.md.
+title: "[bug] <skill-id>: <short description>"
+labels: ["bug"]
+body:
+  - type: input
+    id: skill_path
+    attributes:
+      label: Skill path
+      description: Path to the SKILL.md with the problem.
+      placeholder: .github/skills/networking/rest-client/SKILL.md
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong
+      description: Describe the incorrect instruction, outdated API, bad sample, etc.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What it should say
+      description: Your proposed correction.
+  - type: textarea
+    id: repro
+    attributes:
+      label: How to reproduce (if applicable)
+      description: Minimal steps or environment info.
